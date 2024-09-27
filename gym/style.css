@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+nav{
+    position: flex;
+    width: 100vw;
+    height: 60px;
+    border-top: 5rem solid brown;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border-radius: 20%; */
+
+    
+}
+header{
+    height: 50px;
+    background-color: black;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 55px;
+    width: 15%;
+    font-weight: 700;
+    background-color: brown;
+}
+ul{
+     display: flex;
+     align-items: center;
+     height: 60px;
+}
+ul a{
+    text-decoration: none;
+    color: white;
+    margin: 0 2rem;
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-size: 16px;
+}
+ul li{
+    list-style: none;
+}
+ul a:hover{
+    color: rgb(231, 235, 13);
+}
+
+    .banner{
+        background: url(https://w0.peakpx.com/wallpaper/856/243/HD-wallpaper-sports-fitness-bodybuilding-muscle-thumbnail.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 80vh;
+
+    }
+    
+img{
+    height: 50px;
+    width: 200px;
+    margin-bottom: 6%;
+}
+.btn1{
+    padding: .6rem .8rem;
+    /* text-transform: uppercase; */
+    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+    background-color: rgb(203, 185, 27);
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    outline: none;
+    border: 2px solid wheat;
+    transition: 3s;
+    cursor: pointer;
+    border-radius: 8px;
+   
+}
+.btn1{
+    margin-top: 10%;
+}
+.btn1:hover{
+    background-color: black;
+}
+.btn2{
+    padding: .6rem .8rem;
+    /* text-transform: uppercase; */
+    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    outline: none;
+    border: 2px solid wheat;
+    transition: 3s;
+    cursor: pointer;
+    border-radius: 8px;
+}
+ul button{
+    background-color: rgb(155, 150, 53);
+    height: 40px;
+  border-radius: 10px;
+  color: black;
+}
+.neha{
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    color: white;
+}
+.neha h2,p{
+    display: block;
+    width: 60%;
+
+}
+.neha h2{
+    letter-spacing: 2px;
+    font-size: 30px;
+}
+.neha .btn{
+    margin-top: 2rem;
+}
+ul{
+    margin-bottom: 6%;
+}
+footer{
+    background-color: rgb(221, 145, 45);
+height: 40px;
+width: 200px;
+}
+.link{
+    
+    display: flex;
+    margin-top: 12px;
+    
+}
+a img{
+    height: 30px;
+    width: 30px; 
+}
