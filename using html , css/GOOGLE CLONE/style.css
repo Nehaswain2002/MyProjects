@@ -1,6 +1,14 @@
 *{
     margin: 0;
 }
+.nav{
+    transform: translateY(-50px);
+}
+.nav1 img{
+    height: 30px;
+    width: 30px;
+    padding-left: 60px;
+}
 body{
     display: flex;
     flex-direction: column;

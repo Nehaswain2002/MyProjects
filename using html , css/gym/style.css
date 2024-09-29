@@ -15,15 +15,22 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     /* border-radius: 20%; */
 
     
 }
+.box{
+    transform: translateY(-50px); 
+  
+  
+}
+
 header{
     height: 50px;
     background-color: black;
 }
-.logo{
+/* .logo{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,11 +38,12 @@ header{
     width: 15%;
     font-weight: 700;
     background-color: brown;
-}
+} */
 ul{
      display: flex;
      align-items: center;
      height: 60px;
+     padding-bottom: 14px;
 }
 ul a{
     text-decoration: none;
@@ -45,12 +53,16 @@ ul a{
     font-family: 'Times New Roman', Times, serif;
     font-weight: 700;
     font-size: 16px;
+    text-decoration: none;
+
 }
 ul li{
     list-style: none;
 }
 ul a:hover{
     color: rgb(231, 235, 13);
+
+  border-bottom: 1px solid yellow;
 }
 
     .banner{
@@ -67,6 +79,8 @@ img{
     height: 50px;
     width: 200px;
     margin-bottom: 6%;
+    border-radius: 6px;
+    padding: 8px;
 }
 .btn1{
     padding: .6rem .8rem;
