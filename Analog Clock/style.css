@@ -1,51 +1,176 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: white;
-
+    background: rgb(133, 124, 124);
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
 }
-.container{
+
+.container {
     position: relative;
     background: rgb(12, 9, 9);
-    /* min-height: 500px; */
+    min-height: 500px;
     border-radius: 20px;
-    box-shadow: 5px 25px 75px black,10px 50px 70px black
-    inset 5px 5px 10px black,
-    inset 5px 5px 20px black, 
-    inset -5px -5px -15px black;
-    border-top-right-radius:225px ;
-    border-top-left-radius:225px ;
+    box-shadow: 
+        5px 25px 75px black, 
+        inset 10px 50px 70px black,
+        inset 5px 5px 10px black,
+        inset -5px -5px -15px black;
+    border-top-right-radius: 225px;
+    border-top-left-radius: 225px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
-.clock{
+
+.clock {
     position: relative;
     width: 450px;
     height: 450px;
     background: rgb(63, 59, 59);
     border-radius: 50%;
-    box-shadow: 10px 50px 70px black,
-    inset 5px 5px 10px black,
-    inset 5px 5px 20px black, 
-    inset -5px -5px 15px black;
+    box-shadow: 
+        10px 50px 70px rgb(70, 52, 52),
+        inset 5px 5px 10px black,
+        inset 5px 5px 20px black,
+        inset -5px -5px 15px black;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
 }
-.clock::before{
-    contain: content;
+
+.clock::before {
+    content: '';
+    position: absolute;
     width: 8px;
     height: 8px;
- background: black;
- border: 3px solid white;
- background-repeat: 50%;
+    background: black;
+    border: 3px solid white;
+    background-color: #2f363e;
+    border-radius: 50%;
+    z-index: 1000;
+}
+
+.clock span {
+    position: absolute;
+    inset: 20px;
+    /* width: 100%;
+    height: 100%; */
+    /* display: flex; */
+    justify-content: center;
+    text-align: center;
+    /* align-items: center; */
+    color: white;
+    transform: rotate(calc(30deg * var(--i)));
+    /* 360/12 = 30 degrees */
+}
+
+.clock span b {
+    font-size: 2rem;
+    opacity: 0.25;
+    font-weight: 600;
+    display: inline-block;
+    transform: rotate(calc(-30deg * var(--i)));
+}
+
+.circle {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border: 2px solid rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 10;
+  }
+.circle i {
+    position: absolute;
+    width: 6px;
+    height: 50%;
+    background-color: var(--clr);
+    opacity: 0.75;
+    transform-origin: bottom;
+    transform: scaleY(0.5);
+  }
+  .circle:nth-child(2) i{
+    width: 6px;
+  }
+  .circle:nth-child(3) i{
+    width: 6px;
+  }
+.circle2{
+    width: 240px;
+    height: 240px;
+    z-index: 9;
+}
+.circle3 {
+    width: 180px;
+    height: 180px;
+    z-index: 8;
+  }
+  .circle::before{
+    content: "";
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    background-color: #fff;
+    box-shadow: 2px 2px 20px var(--clr), 0 0 60px var(--clr);
+  }
+  #time {
+    margin-bottom: 40px;
+    display: flex;
+    padding: 10px 20px;
+    font-size: 2rem;
+    font-weight: 600;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 40px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5),
+      inset 5px 5px 20px rgba(255, 255, 255, 0.2),
+      inset -5px -5px 15px rgba(0, 0, 0, 0.75);
+  }
+  
+  
+#time div {
+    position: relative;
+    padding: 10px;
+    text-align: center;
+    font-weight: 500;
+    color: var(--clr);
+  }
+  #time div:nth-child(1)::after,
+  #time div:nth-child(2)::after {
+    content: ":";
+    position: absolute;
+    right: -4px;
+    top: 4px;
+  }
+  #time div:last-child {
+    font-size: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+  }
+  #time div:nth-child(2)::after {
+  animation: animate 1s steps(1) infinite;
+}
+@keyframes animate {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
